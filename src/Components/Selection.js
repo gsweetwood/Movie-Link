@@ -5,7 +5,6 @@ const Selection = props => {
   console.log(props);
   return (
     <div className="selection-container">
-      {/* <h2>Selection</h2> */}
       <div className="title-image">
         <div>{props.selectionName}</div>
 

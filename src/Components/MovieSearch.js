@@ -22,8 +22,6 @@ const MovieSearch = props => {
   };
 
   const getSelectionDetails = () => {
-    console.log(activeSelection);
-
     if (typeof activeSelection.id === "undefined") {
       return;
     }
@@ -32,6 +30,7 @@ const MovieSearch = props => {
     if (type === "person") {
       creditType = "combined_credits";
     }
+
     let id = activeSelection.id;
 
     fetch(`${baseUrl}/${type}/${id}/${creditType}?api_key=${api_key}`)
@@ -42,7 +41,6 @@ const MovieSearch = props => {
       .then(data => {
         setSelectionDetails(data.cast);
         console.log(`new details set`);
-        console.log(data.cast);
       })
       .catch(error => {
         console.log(error);
@@ -62,7 +60,7 @@ const MovieSearch = props => {
 
   const baseUrl = "https://api.themoviedb.org/3";
   const api_key = process.env.REACT_APP_ACTOR_APP_API_KEY;
-  // const test = `${baseUrl}/search/multi?api_key=${api_key}&language=en-US&query=${searchQuery}&page=1&incluede_adult=false`;
+
   const handleSearchMovie = () => {
     if (searchTerm !== "") {
       fetch(
@@ -72,7 +70,6 @@ const MovieSearch = props => {
           return response.json();
         })
         .then(data => {
-          console.log(data);
           setResultList(data.results);
         })
         .catch(error => {

@@ -8,35 +8,6 @@ const Details = props => {
   return (
     <div className="details-container">
       <h3>Credits</h3>
-      {/* <p>{props.selection.name}</p>
-      <p>{props.selection.id}</p>
-      <p className="selection-type">{props.selection.type}</p> */}
-      {/* <ul>
-        {typeof props.castList !== undefined ? (
-          props.castList.map(item => {
-            return (
-              <li
-                className="detail-item"
-                key={item.id}
-                onClick={() => {
-                  if (props.selection.type === "person") {
-                    onChoose(item.original_title, item.id, item.media_type);
-                  } else {
-                    onChoose(item.name, item.id, "person");
-                  }
-                }}
-              >
-                {props.selection.type === "person"
-                  ? item.original_title || item.name
-                  : item.name}{" "}
-                -- {item.character || "Un-named"}
-              </li>
-            );
-          })
-        ) : (
-          <div>NONEEEEE</div>
-        )}
-      </ul> */}
       <table>
         <tr>
           <th>TV Show</th>

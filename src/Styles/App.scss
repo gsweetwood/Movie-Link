@@ -1,3 +1,5 @@
+//RESET PAGE VALUES
+//ADD SMOOTH SCROLL
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +25,10 @@ body {
 main {
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
+
+//MOVIE SEARCH
 
 input,
 button {
@@ -35,10 +38,8 @@ button {
 
 .movie-search {
   display: flex;
-
   flex-direction: column;
   width: 80%;
-
   align-items: center;
 }
 
@@ -49,6 +50,8 @@ button {
 .search-box {
   margin-bottom: 35px;
 }
+
+//RESULTS
 
 .results {
   max-width: 80%;
@@ -111,6 +114,8 @@ button {
   width: 30px;
 }
 
+//SELECTION
+
 .selection-type {
   text-transform: uppercase;
 }
@@ -132,6 +137,7 @@ button {
   align-items: center;
 }
 
+//DETAILS
 .detail-item:hover {
   cursor: pointer;
 }
