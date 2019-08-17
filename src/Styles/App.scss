@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 40px;
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+input,
+button {
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.movie-search {
+  display: flex;
+
+  flex-direction: column;
+  width: 80%;
+
+  align-items: center;
+}
+
+.confused-pic {
+  width: 50%;
+}
+
+.search-box {
+  margin-bottom: 35px;
+}
+
+.results {
+  max-width: 80%;
+  text-align: center;
+}
+
+.result-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.result-item {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 10px;
+  width: 1fr;
+  flex-grow: 1;
+  margin: 10px 10px 10px 10px;
+}
+
+.movie {
+  border: 1px solid orangered;
+}
+
+.person {
+  border: 1px solid green;
+}
+
+.result-item:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.movie-name {
+  font-weight: bold;
+}
+
+.results-legend {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30% 0 30%;
+}
+
+.movie-red {
+  border: orangered solid 3px;
+  border-radius: 5px;
+  width: 30px;
+}
+
+.tvShow-blue {
+  border: blue solid 3px;
+  border-radius: 5px;
+  width: 30px;
+}
+
+.person-green {
+  border: green solid 3px;
+  border-radius: 5px;
+  width: 30px;
+}
+
+.selection-type {
+  text-transform: uppercase;
+}
+
+.selection-image {
+  height: 250px;
+}
+
+.selection-container {
+  text-align: center;
+  margin: 20px;
+  img {
+    margin: 10px 0 15px 30px;
+  }
+}
+
+.title-image {
+  display: flex;
+  align-items: center;
+}
+
+.detail-item:hover {
+  cursor: pointer;
+}
+
+.credit-row:hover {
+  cursor: pointer;
+}
+
+tr {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+td {
+  border-bottom: rgba(128, 128, 128, 0.178) 1px solid;
+}

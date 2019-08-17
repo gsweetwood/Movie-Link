@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Movie-Link
 
-## Available Scripts
+A React application that lets you query a movie/tv/actor database
+It returns a list of potential options. Click any option an you
+will be rewarded with the profile/poster of your selection as well
+as all the credits associated with that show/actor. Every item in
+list is clickable and will automatically change your selection and
+return the credits for your new selection.
 
-In the project directory, you can run:
+## What I Learned/ Skills
 
-### `npm start`
+- REACT
+- JAVASCRIPT
+- CONSUMING REST APIS
+- ASYNCHRONOUS CALLS
+- MANAGING STATE
+- SASS
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## To Get Started
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This application utilizes The Movie DB which requires a free account
+that yields a free API key. I have hidden my key GitHub, but here is
+a way for you to insert your own.
 
-### `npm test`
+This project requires nodeJS to be previously installed on your PC.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Sign up for a free acount and follow the instuctions at https://developers.themoviedb.org/3/getting-started/introduction
+2. Clone this repo.
+3. In the terminal for this project folder enter the command: npm install
+   - This will install any dependencies.
+4. Create a new file named ".env"
+   - Inside this file prepend "REACT*APP*" to your API key variable name
+   * Example: REACT_APP_GOOGLE_API_KEY=123456 (no quotes)
+5. In your .gitignore file, add your .env file. This is to prevent git from
+   from adding your .env file to github. \* /# api keys
+   .env
+6. Save all changes.
+7. In the terminal for this project folder enter the command: npm start
 
-### `npm run build`
+That's it. That will start up a local development server and run the application.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+_This application is still under development and will be adding features and
+updates to the styling/UI._
