@@ -29,7 +29,7 @@ This project requires nodeJS to be previously installed on your PC.
 3. In the terminal for this project folder enter the command: npm install
    - This will install any dependencies.
 4. Create a new file named ".env"
-   - Inside this file prepend "REACT*APP*" to your API key variable name
+   - Inside this file prepend "REACT\_APP\_" to your API key variable name
    * Example: REACT_APP_GOOGLE_API_KEY=123456 (no quotes)
 5. In your .gitignore file, add your .env file. This is to prevent git from
    from adding your .env file to github. \* /# api keys
