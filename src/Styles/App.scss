@@ -11,6 +11,13 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  margin: inherit;
+  padding: inherit;
+}
+
 .header {
   text-align: center;
   padding: 40px;
@@ -30,12 +37,6 @@ main {
 
 //MOVIE SEARCH
 
-input,
-button {
-  border-radius: 5px;
-  margin-right: 20px;
-}
-
 .movie-search {
   display: flex;
   flex-direction: column;
@@ -48,7 +49,23 @@ button {
 }
 
 .search-box {
-  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 50px auto;
+  min-width: 350px;
+
+  input,
+  button {
+    border-radius: 3px;
+    margin-right: 20px;
+  }
+  input {
+    min-width: 250px;
+  }
+
+  button {
+    min-width: 100px;
+  }
 }
 
 //RESULTS
@@ -135,6 +152,8 @@ button {
 .title-image {
   display: flex;
   align-items: center;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 //DETAILS
@@ -144,6 +163,17 @@ button {
 
 .credit-row:hover {
   cursor: pointer;
+}
+
+.details-container {
+  padding-bottom: 50px;
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  th {
+    font-size: 1.5rem;
+  }
 }
 
 tr {
@@ -156,4 +186,5 @@ li {
 
 td {
   border-bottom: rgba(128, 128, 128, 0.178) 1px solid;
+  max-width: 400px;
 }

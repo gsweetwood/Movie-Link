@@ -10,8 +10,8 @@ const Details = props => {
       <h3>Credits</h3>
       <table>
         <tr>
-          <th>TV Show</th>
-          <th>Movie</th>
+          <th>{props.selection.type === "person" ? "TV Show" : "Actor"}</th>
+          <th>{props.selection.type === "person" ? "Movie" : ""}</th>
           <th>Character</th>
         </tr>
         {props.castList.map(credit => {
@@ -19,8 +19,6 @@ const Details = props => {
             <tr
               className="credit-row"
               onClick={() => {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
                 if (props.selection.type === "person") {
                   onChoose(
                     credit.original_title,
@@ -38,9 +36,17 @@ const Details = props => {
                 }
               }}
             >
-              <td>{credit.name || "-"}</td>
-              <td>{credit.original_title || "-"}</td>
-              <td>{credit.character || "not listed"}</td>
+              <td>
+                <a href="#movie-search-term">{credit.name || ""}</a>
+              </td>
+              <td>
+                <a href="#movie-search-term">{credit.original_title || ""}</a>
+              </td>
+              <td>
+                <a href="#movie-search-term">
+                  {credit.character || "not listed"}
+                </a>
+              </td>
             </tr>
           );
         })}

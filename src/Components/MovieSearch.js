@@ -19,6 +19,7 @@ const MovieSearch = props => {
       imagePath: imagePath
     });
     setResultList([]);
+    setSearchTerm("");
   };
 
   const getSelectionDetails = () => {
@@ -40,6 +41,7 @@ const MovieSearch = props => {
       })
       .then(data => {
         setSelectionDetails(data.cast);
+        setSearchTerm("");
         console.log(`new details set`);
       })
       .catch(error => {
@@ -90,6 +92,7 @@ const MovieSearch = props => {
         <input
           type="text"
           id="movie-search-term"
+          placeholder="Enter an actor/movie/tv show"
           onChange={handleInput}
           value={searchTerm}
           onKeyPress={enterPressed}
