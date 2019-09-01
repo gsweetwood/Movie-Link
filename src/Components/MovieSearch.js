@@ -8,7 +8,7 @@ console.log(process.env.REACT_APP_ACTOR_APP_API_KEY);
 const MovieSearch = props => {
   const [searchTerm, setSearchTerm] = useState("");
   const [resultList, setResultList] = useState([]);
-  const [activeSelection, setActiveSelection] = useState({ name: "NA" });
+  const [activeSelection, setActiveSelection] = useState({});
   const [selectionDetails, setSelectionDetails] = useState([]);
 
   const onChooseFromSearch = (selection, id, type, imagePath) => {
@@ -73,6 +73,8 @@ const MovieSearch = props => {
         })
         .then(data => {
           setResultList(data.results);
+          setActiveSelection({});
+          setSelectionDetails([]);
         })
         .catch(error => {
           console.log(`ERROR!`);
@@ -101,7 +103,7 @@ const MovieSearch = props => {
       </span>
 
       <Results results={resultList} onChooseFromSearch={onChooseFromSearch} />
-      {activeSelection.name === "NA" ? (
+      {!activeSelection.name ? (
         <img className="confused-pic" src={confusedImg} />
       ) : (
         <Selection
