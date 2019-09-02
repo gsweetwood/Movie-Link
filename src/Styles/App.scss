@@ -19,6 +19,7 @@ a {
 }
 
 .header {
+  width: 100%;
   text-align: center;
   padding: 40px;
   h1 {
@@ -30,9 +31,11 @@ a {
 }
 
 main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 //MOVIE SEARCH
@@ -42,6 +45,7 @@ main {
   flex-direction: column;
   width: 80%;
   align-items: center;
+  align-content: center;
 }
 
 .confused-pic {
@@ -51,7 +55,7 @@ main {
 .search-box {
   display: flex;
   justify-content: center;
-  margin: 30px auto 50px auto;
+  margin: 30px 0 50px 0;
   min-width: 350px;
 
   input,
@@ -109,6 +113,7 @@ main {
 
 .results-legend {
   display: flex;
+
   justify-content: space-between;
   padding: 0 30% 0 30%;
 }
@@ -117,18 +122,21 @@ main {
   border: orangered solid 3px;
   border-radius: 5px;
   width: 30px;
+  flex-shrink: 0;
 }
 
 .tvShow-blue {
   border: blue solid 3px;
   border-radius: 5px;
   width: 30px;
+  flex-shrink: 0;
 }
 
 .person-green {
   border: green solid 3px;
   border-radius: 5px;
   width: 30px;
+  flex-shrink: 0;
 }
 
 //SELECTION
@@ -187,4 +195,48 @@ li {
 td {
   border-bottom: rgba(128, 128, 128, 0.178) 1px solid;
   max-width: 400px;
+}
+
+//*MOBILE/SMALL SCREENS
+@media screen and (max-width: 600px) {
+  .title-image {
+    flex-direction: column;
+  }
+
+  .search-box {
+    flex-direction: column;
+    margin: 20px 0;
+    align-items: center;
+    align-content: center;
+    input {
+      min-width: 250px;
+      min-height: 50px;
+    }
+    button {
+      margin-top: 15px;
+      min-height: 50px;
+      min-width: 250px;
+    }
+  }
+
+  .header {
+    padding-bottom: 10px;
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .confused-pic {
+    width: 100%;
+  }
+
+  .results-legend {
+    display: flex;
+
+    justify-content: space-evenly;
+    padding: 0;
+  }
 }

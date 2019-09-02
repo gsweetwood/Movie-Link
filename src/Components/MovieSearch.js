@@ -90,10 +90,9 @@ const MovieSearch = props => {
 
   return (
     <div className="movie-search">
-      <span className="search-box">
+      <span className="search-box" id="movie-search-term">
         <input
           type="text"
-          id="movie-search-term"
           placeholder="Enter an actor/movie/tv show"
           onChange={handleInput}
           value={searchTerm}
